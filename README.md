@@ -12,6 +12,10 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+# ESLINT FIX
+npm run build
+npx eslint --fix
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -34,3 +38,40 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project Stucture
+
+```
+nextjs-amazon-sp-api/
+├── .env
+├── .gitignore
+├── next.config.js
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+├── README.md
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── pages/
+│   │   ├── api/
+│   │   │   ├── auth.ts
+│   │   │   └── products.ts
+│   │   ├── _app.tsx
+│   │   └── index.tsx
+│   ├── components/
+│   │   └── ProductList.tsx
+│   ├── styles/
+│   │   └── globals.css
+│   ├── lib/
+│   │   └── amazon-sp-api.ts
+│   ├── types/
+│   │   └── product.ts
+│   └── utils/
+│       └── auth.ts
+└── tests/
+    └── api/
+        └── products.test.ts
+
+```
